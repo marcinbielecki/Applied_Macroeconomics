@@ -1,2 +1,4 @@
+*.db
+
 # Ignore folder with ipython notebook checkpoints
 .ipynb_checkpoints/
