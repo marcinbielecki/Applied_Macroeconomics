@@ -1,5 +1,7 @@
 numpy
+sympy
 pandas
+pandas_datareader
 matplotlib
 statsmodels
 scipy
