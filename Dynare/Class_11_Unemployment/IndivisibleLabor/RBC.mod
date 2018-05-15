@@ -1,5 +1,3 @@
-close all;	% Closes all open figures
-
 % Preamble: declare variable types
 var			y c i k h w r z y_h							% Endogenous variables, 
 			Output Consumption Investment Capital 		% separated by comma or whitespace
@@ -39,7 +37,7 @@ model;
 	Capital			= 100 * log(k/steady_state(k));
 	Hours			= 100 * log(h/steady_state(h));
 	Wages			= 100 * log(w/steady_state(w));
-	InterestRate	= 100 * (r-steady_state(r));
+	InterestRate	= 400 * (r-steady_state(r));
 	TFP				= 100 * log(z/steady_state(z));
 	Productivity	= 100 * log(y_h/steady_state(y_h));
 end;
@@ -61,8 +59,8 @@ end;
 
 % Declare shock variance
 shocks;
-	var epsilon = sigma_z^2;				% When calculating model statistical moments
-	% var epsilon	; stderr 0.01;						% When producing impulse response functions
+	% var epsilon = sigma_z^2;				% When calculating model statistical moments
+	var epsilon	; stderr 0.01;						% When producing impulse response functions
 end;
 
 % Calculate steady state
@@ -72,7 +70,4 @@ steady;
 check;
 
 % Simulate the model
-stoch_simul(hp_filter=1600, nograph)		% Variables will be filtered and no graphs will be displayed
-% stoch_simul(noprint)						% Does not print out statistics, will graph IRF with 40 quarter horizon
-	Output Consumption Investment Capital 	% List of variables we want to be displayed
-	Hours Wages InterestRate TFP Productivity;
+stoch_simul(hp_filter=1600);
