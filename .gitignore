@@ -2,3 +2,5 @@
 
 # Ignore folder with ipython notebook checkpoints
 .ipynb_checkpoints/
+
+__pycache__/
