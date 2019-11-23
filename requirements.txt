@@ -5,3 +5,4 @@ pandas_datareader
 matplotlib
 statsmodels
 scipy
+xlrd
