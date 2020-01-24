@@ -6,5 +6,4 @@ matplotlib
 statsmodels
 scipy
 xlrd
-bisect
 time
