@@ -136,7 +136,7 @@ def PlotIndifferenceCurves(y_0=1, y_1=1, β=0.95, r=0.05, levels=[1], figsize=(5
 
     c_max = np.ceil(max(c_0_max, c_1_max))
 
-    c_0 = np.linspace(0.01, c_max, 1e3)
+    c_0 = np.linspace(0.01, c_max, 1000)
     
     if fig_ax == None:
         fig, ax = plt.subplots(figsize=figsize)
